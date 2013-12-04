@@ -3,6 +3,7 @@
 	<name>coreApps.EditDistanceCalc</name>
 	<comment></comment>
 	<projects>
+		<project>CommJ.library</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

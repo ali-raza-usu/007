@@ -25,6 +25,7 @@ public aspect ConversationTime {
 		if (obj instanceof Client) {
 			TranslationMessage msg = (TranslationMessage) convertBufferToMessage(tempBuf);
 			conversationMap.put(msg.getRequestId(), new Date().getTime());
+			
 		}
 		return proceed(_channel, _buffer);
 	}
