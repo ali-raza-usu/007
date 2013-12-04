@@ -3,7 +3,7 @@
   associations="true" dependencies="true" nesting-relationships="true">  
   <class id="1" language="java" name="utilities.Encoder" project="coreApps.EditDistanceCalc" 
     file="/coreApps.EditDistanceCalc/src/utilities/Encoder.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="586" y="414"/>    
+    <position height="-1" width="-1" x="333" y="304"/>    
     <display autosize="false" stereotype="false" package="false" initial-value="false" signature="false" 
       accessors="true" visibility="false">      
       <attributes public="false" package="false" protected="false" private="false" static="false"/>      
@@ -12,7 +12,7 @@
   </class>  
   <class id="2" language="java" name="utilities.TranslationMessage" project="coreApps.EditDistanceCalc" 
     file="/coreApps.EditDistanceCalc/src/utilities/TranslationMessage.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="295" y="612"/>    
+    <position height="-1" width="-1" x="91" y="307"/>    
     <display autosize="false" stereotype="false" package="false" initial-value="false" signature="false" 
       accessors="true" visibility="false">      
       <attributes public="false" package="false" protected="false" private="false" static="false"/>      
@@ -21,7 +21,7 @@
   </class>  
   <class id="3" language="java" name="interactive.Server" project="coreApps.EditDistanceCalc" 
     file="/coreApps.EditDistanceCalc/src/interactive/Server.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="203" y="88"/>    
+    <position height="-1" width="-1" x="242" y="202"/>    
     <display autosize="false" stereotype="false" package="false" initial-value="false" signature="false" 
       accessors="true" visibility="false">      
       <attributes public="false" package="false" protected="false" private="false" static="false"/>      
@@ -30,51 +30,34 @@
   </class>  
   <class id="4" language="java" name="interactive.Client" project="coreApps.EditDistanceCalc" 
     file="/coreApps.EditDistanceCalc/src/interactive/Client.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="457" y="144"/>    
+    <position height="-1" width="-1" x="354" y="162"/>    
     <display autosize="false" stereotype="false" package="false" initial-value="false" signature="false" 
       accessors="true" visibility="false">      
       <attributes public="false" package="false" protected="false" private="false" static="false"/>      
       <operations public="false" package="false" protected="false" private="false" static="false"/>    
     </display>  
   </class>  
-  <class id="5" language="java" name="interactive.Controller" project="coreApps.EditDistanceCalc" 
-    file="/coreApps.EditDistanceCalc/src/interactive/Controller.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="741" y="51"/>    
-    <display autosize="false" stereotype="false" package="false" initial-value="false" signature="false" 
-      accessors="true" visibility="false">      
-      <attributes public="false" package="false" protected="false" private="false" static="false"/>      
-      <operations public="false" package="false" protected="false" private="false" static="false"/>    
-    </display>  
-  </class>  
-  <dependency id="6">    
+  <dependency id="5">    
+    <bendpoint x="66" y="163"/>    
     <end type="SOURCE" refId="4"/>    
-    <end type="TARGET" refId="1"/>  
+    <end type="TARGET" refId="2"/>  
+  </dependency>  
+  <dependency id="6">    
+    <bendpoint x="102" y="203"/>    
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="2"/>  
   </dependency>  
   <dependency id="7">    
-    <end type="SOURCE" refId="5"/>    
-    <end type="TARGET" refId="3"/>  
-  </dependency>  
-  <dependency id="8">    
     <end type="SOURCE" refId="3"/>    
     <end type="TARGET" refId="1"/>  
   </dependency>  
-  <dependency id="9">    
-    <bendpoint x="311" y="204"/>    
-    <end type="SOURCE" refId="4"/>    
-    <end type="TARGET" refId="2"/>  
-  </dependency>  
-  <dependency id="10">    
-    <end type="SOURCE" refId="5"/>    
-    <end type="TARGET" refId="4"/>  
-  </dependency>  
-  <dependency id="11">    
-    <bendpoint x="251" y="204"/>    
-    <end type="SOURCE" refId="3"/>    
-    <end type="TARGET" refId="2"/>  
-  </dependency>  
-  <dependency id="12">    
+  <dependency id="8">    
     <end type="SOURCE" refId="1"/>    
     <end type="TARGET" refId="2"/>  
+  </dependency>  
+  <dependency id="9">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="1"/>  
   </dependency>  
   <classifier-display autosize="false" stereotype="false" package="false" initial-value="false" signature="false" 
     accessors="true" visibility="false">    
