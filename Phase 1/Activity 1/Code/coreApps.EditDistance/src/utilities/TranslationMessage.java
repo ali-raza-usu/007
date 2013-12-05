@@ -72,5 +72,4 @@ public class TranslationMessage extends Message {
 	public void setResponseId(UUID responseId) {
 		this.responseId = responseId;
 	}
-
 }

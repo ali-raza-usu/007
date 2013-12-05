@@ -1,5 +1,105 @@
 {\rtf1\ansi\ansicpg1252\cocoartf1265
-{\fonttbl}
-{\colortbl;\red255\green255\blue255;}
-\margl1440\margr1440\vieww10400\viewh25480\viewkind0
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 Monaco;}
+{\colortbl;\red255\green255\blue255;\red255\green0\blue0;\red0\green200\blue125;\red0\green0\blue128;
+}
+\margl1440\margr1440\vieww13600\viewh16220\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f0\fs24 \cf0 First try of reuse\'85 with no modification from the exercise that was implemented as a simple example did not work\
+\
+Now, reviewing the weaving problem\
+\
+I change the TranslationMessage to derivate from the Message class belonging to Commj, but it triggers some errors.\
+\
+when I include the commj library, other errors arise, specially related to the handling of Message objects and encoder.\
+\
+BEFORE ADDING\
+\pard\pardeftab720
+
+\f1\fs22 \cf2 log4j:WARN No appenders could be found for logger (interactive.Client).\cf0 \
+===============Levenshtein Translator======================\
+Enter String 1 : log4j:WARN Please initialize the log4j system properly.\
+\pard\pardeftab720
+\cf3 jhola\cf0 \
+Enter String 2 : \cf3 chao\cf0 \
+================== Stats for Performance Measure ========================\
+ Total Receives 1\
+avg Turnaround Time for conv. 217.0  Overall total time for conv 217.0\
+current Turnaround Time : 217.0 avg Minimum Turnaround Time for conv. 217.0  Maximum Turnaround time for conv 217.0\
+Received Levenshtein Distance between string : jhola and string chao is 4\
+===============Levenshtein Translator======================\
+Enter String 1 : 
+\f0\fs24 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+\cf0 \
+\
+AFTER ADDING\
+\pard\pardeftab720
+
+\f1\fs22 \cf2 log4j:WARN No appenders could be found for logger (baseaspects.communication.Initialization).\cf0 \
+\cf2 log4j:WARN Please initialize the log4j system properly.\cf0 \
+===============Levenshtein Translator======================\
+Enter String 1 : hola\
+Enter String 2 : \cf3 chao\cf0 \
+\pard\pardeftab720
+\cf4 \ul \ulc4 java.lang.NullPointerException\cf0 \ulnone \
+\pard\pardeftab720
+\cf2 	at interactive.Client.write_aroundBody5$advice(\cf4 \ul \ulc4 Client.java:166\cf2 \ulnone )\cf0 \
+\cf2 	at interactive.Client.coreClient(\cf4 \ul \ulc4 Client.java:64\cf2 \ulnone )\cf0 \
+\cf2 	at interactive.Client.run(\cf4 \ul \ulc4 Client.java:110\cf2 \ulnone )\cf0 \
+===============Levenshtein Translator======================\
+Enter String 1 : \
+\
+After talking to Ali I came to know that I must remove Message and Encoder, because CommJ library handle these by allowing the aspects to find the right encoders.\
+\
+\
+\
+Implementation for compute the performance time is done, but when it runs every time it counts twos. still needed to debug and see what is happening\
+\
+	
+\f0\fs24 \
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
 }

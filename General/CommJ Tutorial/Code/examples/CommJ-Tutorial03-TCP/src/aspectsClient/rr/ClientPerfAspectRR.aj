@@ -1,13 +1,7 @@
 package aspectsClient.rr;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 
 import joinpoints.communication.RequestReplyConversationJP;
-import org.apache.log4j.Logger;
 import baseaspects.communication.RRConversationAspect;
-import utilities.Encoder;
-import utilities.Message;
 
 public aspect ClientPerfAspectRR  extends RRConversationAspect{
 	String sendTime = null;
