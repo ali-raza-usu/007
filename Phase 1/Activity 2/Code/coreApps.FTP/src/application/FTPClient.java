@@ -177,7 +177,7 @@ public class FTPClient extends Thread {
 		byte[] bytes = new byte[buffer.remaining()];
 		buffer.get(bytes);
 		if (bytes.length > 0) {
-			message = Encoder.decode(bytes);
+			message = (Message) Encoder.decode(bytes);
 			// _logger.debug("Message length is "+ bytes.length +
 			// message.getClass());
 			buffer.clear();
