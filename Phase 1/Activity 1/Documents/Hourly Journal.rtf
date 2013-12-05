@@ -1,7 +1,7 @@
 {\rtf1\ansi\ansicpg1252\cocoartf1265
 {\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 Monaco;}
 {\colortbl;\red255\green255\blue255;\red255\green0\blue0;\red0\green200\blue125;\red0\green0\blue128;
-}
+\red127\green0\blue85;\red63\green127\blue95;}
 \margl1440\margr1440\vieww13600\viewh16220\viewkind0
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
 
@@ -53,11 +53,51 @@ Enter String 1 : \
 After talking to Ali I came to know that I must remove Message and Encoder, because CommJ library handle these by allowing the aspects to find the right encoders.\
 \
 \
+Implementation for compute the performance time is done, but when it runs every time it counts tow times. still needed to debug and see what is happening\
 \
-Implementation for compute the performance time is done, but when it runs every time it counts twos. still needed to debug and see what is happening\
+problem was other aspect was active.\
 \
-	
+\
+exercise finished\
+\
+\pard\pardeftab720
+\cf5 package\cf0  aspects;\
+\
+\cf5 import\cf0  java.util.Date;\
+\cf5 import\cf0  \ul java.util.HashMap\ulnone ;\
+\cf5 import\cf0  \ul java.util.UUID\ulnone ;\
+\
+\cf5 import\cf0  \ul org.apache.log4j.Logger\ulnone ;\
+\
+\cf5 import\cf0  \ul utilities.TranslationMessage\ulnone ;\
+\
+\cf5 import\cf0  joinpoints.communication.RequestReplyConversationJP;\
+\cf5 import\cf0  baseaspects.communication.RRConversationAspect;\
+\
+\cf5 public\cf0  \cf5 aspect\cf0  PerformanceTimeAspectRR  \cf5 extends\cf0  RRConversationAspect\{\
+	\cf5 private\cf0  PerformanceMeasure pm = \cf5 new\cf0  PerformanceMeasure();\
+\
+	\cf5 long\cf0  startTime;\
+	Object \cf5 around\cf0 (RequestReplyConversationJP _requestReplyJp): ConversationBegin(_requestReplyJp)\{\
+		startTime =  \cf5 new\cf0  Date().getTime();\
+     	\cf5 return\cf0  \cf5 proceed\cf0 (_requestReplyJp);\
+	\}\
+	\
+	Object \cf5 around\cf0 (RequestReplyConversationJP _requestReplyJp): ConversationEnd(_requestReplyJp)\{	\
+		\cf6 //long convStartTime = conversationMap.get(_requestReplyJp.getMessageId());\cf0 \
+\
+		\cf5 long\cf0  convEndTime = \cf5 new\cf0  Date().getTime();\
+		pm.updateRollingStatsWindow((\cf5 double\cf0 ) (convEndTime - startTime));\
+		System.out.println(pm.printCurrentStats());\
+		\cf5 return\cf0  \cf5 proceed\cf0 (_requestReplyJp);\
+	\}\
+\}\
+\
+\
+implementing with MS was straightforward.\
+based on previous code.
 \f0\fs24 \
+just the initialization, the client SM and then defined state machine\
 \
 \
 \
