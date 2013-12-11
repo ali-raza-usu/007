@@ -1,4 +1,4 @@
-13:52:43,071 DEBUG FTPClient.java: 103 - File created at /Users/edisonlascano/Desktop/Dropbox/2012USUJob/commJ-exp/007/Phase 2/Activity 1/Code/commj.coreApps.FTP/paper.txt
-13:52:46,034 DEBUG FTPClient.java: 131 - Client is sending File Complete Transfer Ack
-13:52:46,036 DEBUG FTPClient.java: 135 - File Transfer is complete. Now the file is being opened
-13:52:46,254 DEBUG FTPClient.java: 149 - Client is closing all the connections 
+21:23:42,307 DEBUG FTPClient.java: 103 - File created at /Users/edisonlascano/Desktop/Dropbox/2012USUJob/commJ-exp/007/Phase 2/Activity 1/Code/commj.coreApps.FTP/paper.txt
+21:23:46,338 DEBUG FTPClient.java: 131 - Client is sending File Complete Transfer Ack
+21:23:46,340 DEBUG FTPClient.java: 135 - File Transfer is complete. Now the file is being opened
+21:23:46,549 DEBUG FTPClient.java: 149 - Client is closing all the connections 
